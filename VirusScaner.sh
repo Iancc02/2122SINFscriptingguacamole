@@ -13,9 +13,8 @@ for S in ${DIRTOSCAN}; do
  # get the value of "Infected lines"
  MALWARE=$(tail "$LOGFILE"|grep Infected|cut -d" " -f3);
 
- # if the value is not equal to zero, send an email with the log file attached
+ 
  if [ "$MALWARE" -ne "0" ];then
- # using heirloom-mailx below
  echo "Malware Found";
  fi 
 done
